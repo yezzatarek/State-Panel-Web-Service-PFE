@@ -13,15 +13,15 @@ public class Panels {
 	@Id
 	private String id;
 	
-	 @Column(name = "status")
-	 private String status;
+	/* @Column(name = "status")
+	 private String status;*/
 	
 	
 	
 	
-	 public Panels(String id, String status) {
+	 public Panels(String id) {
 		 this.id = id;
-		this.status = status;
+		//this.status = status;
 	}
 
 	  public Panels() {
@@ -38,13 +38,13 @@ public class Panels {
  }
 
 
-   public String getStatePanel() {
+  /* public String getStatePanel() {
 	return status;
 }
 
 public void setStatePanel(String state) {
 	this.status = state;
 }	
-
+*/
 	
 }

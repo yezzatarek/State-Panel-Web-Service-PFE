@@ -30,11 +30,11 @@ public class PanelController {
 	
 	
 	
-	@PostMapping(value= "/create")
+	/*@PostMapping(value= "/create")
 	public String create(@RequestBody List<Panels> panels) {
 		serv.createPanels(panels);
 		return "Panel records created.";
-	}
+	}*/
 	
 	@DeleteMapping(value= "/deleteall")
 	public String deleteAll() {
