@@ -6,6 +6,7 @@ import java.util.List;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,14 +28,17 @@ public class PanelController {
         return serv.getPanelsByState();
     }
 	
-	@GetMapping("/hi")
-	public String hello() {
-        return "hi";
-    }
+	
 	
 	@PostMapping(value= "/create")
 	public String create(@RequestBody List<Panels> panels) {
 		serv.createPanels(panels);
 		return "Panel records created.";
+	}
+	
+	@DeleteMapping(value= "/deleteall")
+	public String deleteAll() {
+		serv.deleteAllPanels();
+		return "All panels records deleted.";
 	}
 }

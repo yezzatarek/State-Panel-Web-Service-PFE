@@ -31,6 +31,10 @@ public class PanelServiceImpl implements PanelService {
 	public void createPanels(List<Panels> panels) {
            panel.saveAll(panels);
 	}
+	@Override
+	public void deleteAllPanels() {
+panel.deleteAll();		
+	}
 
 	
 
