@@ -13,20 +13,20 @@ public class Panels {
 	@Id
 	private String id;
 	
-	 @Column(name = "state")
-	 private String state;
-	
-	public Panels() {
-		super();
-	}
+	 @Column(name = "status")
+	 private String status;
 	
 	
 	
-	 public Panels(String id, String state) {
+	
+	 public Panels(String id, String status) {
 		 this.id = id;
-		this.state = state;
+		this.status = status;
 	}
 
+	  public Panels() {
+		  
+	  }
 
 
 	
@@ -39,11 +39,11 @@ public class Panels {
 
 
    public String getStatePanel() {
-	return state;
+	return status;
 }
 
 public void setStatePanel(String state) {
-	this.state = state;
+	this.status = state;
 }	
 
 	
