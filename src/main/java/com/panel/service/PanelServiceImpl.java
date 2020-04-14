@@ -27,10 +27,10 @@ public class PanelServiceImpl implements PanelService {
         return query.getResultList();
     
 	}
-	/*@Override
+	@Override
 	public void createPanels(List<Panels> panels) {
            panel.saveAll(panels);
-	}*/
+	}
 	@Override
 	public void deleteAllPanels() {
 panel.deleteAll();		
