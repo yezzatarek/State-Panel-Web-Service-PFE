@@ -22,14 +22,14 @@ public class PanelServiceImpl implements PanelService {
 	PanelRepository panel;
 	@Override
 	public List<Panels> getPanelsByState() {
-		Query query = entityManager.createNativeQuery("SELECT p.Id, p.statepanel FROM Panels as p " +
-                "WHERE p.statepanel LIKE '%broken%' ", Panels.class);
+		Query query = entityManager.createNativeQuery("SELECT p.Id, p.state FROM Panels as p " +
+                "WHERE p.state LIKE '%broken%' ", Panels.class);
         return query.getResultList();
     
 	}
 	@Override
-	public void createPanels(List<Panels> panels) {
-           panel.saveAll(panels);
+	public void createPanels( Panels panels) {
+           panel.save(panels);
 	}
 
 	

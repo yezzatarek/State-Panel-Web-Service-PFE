@@ -33,7 +33,7 @@ public class PanelController {
     }
 	
 	@PostMapping(value= "/create")
-	public String create(@RequestBody List<Panels> panels) {
+	public String create(@RequestBody Panels panels) {
 		serv.createPanels(panels);
 		return "Panel records created.";
 	}
