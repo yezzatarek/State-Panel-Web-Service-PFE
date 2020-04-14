@@ -2,6 +2,7 @@ package com.panel.service;
 
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -25,6 +26,10 @@ public class PanelServiceImpl implements PanelService {
                 "WHERE p.statepanel LIKE '%broken%' ", Panels.class);
         return query.getResultList();
     
+	}
+	@Override
+	public void createPanels(List<Panels> panels) {
+           panel.saveAll(panels);
 	}
 
 	
