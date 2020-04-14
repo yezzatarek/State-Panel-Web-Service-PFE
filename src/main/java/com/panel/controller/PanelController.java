@@ -26,5 +26,8 @@ public class PanelController {
         return serv.getPanelsByState();
     }
 	
-	
+	@GetMapping("/hi")
+	public String hello() {
+        return "hi";
+    }
 }
