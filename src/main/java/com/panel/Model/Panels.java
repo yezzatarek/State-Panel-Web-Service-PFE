@@ -18,7 +18,6 @@ public class Panels {
 	private String id;
 	
 	@Column(name = "status")
-	@JsonIgnore
 	 private String status;
 	
 	
@@ -42,11 +41,9 @@ public class Panels {
      this.id = id;
  }
 
- @JsonIgnore
   public String getStatePanel() {
 	return status;
 }
-  @JsonProperty
 public void setStatePanel(String state) {
 	this.status = state;
 }	

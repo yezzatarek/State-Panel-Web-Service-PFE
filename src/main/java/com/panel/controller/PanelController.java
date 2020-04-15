@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.*;
-
 import com.panel.Model.Panels;
 import com.panel.service.PanelService;
 
@@ -28,7 +27,8 @@ public class PanelController {
 	@GetMapping("/state")
     public JSONObject getFiltered() {
 		JSONObject myobj = new JSONObject(); 
-		myobj.put("ids", serv.getPanelsByState());
+		myobj.put("Panels", serv.getPanelsByState());
+
 		return myobj;
 
 	}
