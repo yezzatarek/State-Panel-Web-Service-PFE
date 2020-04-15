@@ -6,6 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
+
 
 @Entity
 @Table(name="panels")
@@ -13,15 +17,16 @@ public class Panels {
 	@Id
 	private String id;
 	
-	 /*@Column(name = "status")
-	 private String status;*/
+	@Column(name = "status")
+	@JsonIgnore
+	 private String status;
 	
 	
 	
 	
-	 public Panels(String id) {
+	 public Panels(String id, String status) {
 		 this.id = id;
-		//this.status = status;
+		this.status = status;
 	}
 
 	  public Panels() {
@@ -37,14 +42,14 @@ public class Panels {
      this.id = id;
  }
 
-/*
+ @JsonIgnore
   public String getStatePanel() {
 	return status;
 }
-
+  @JsonProperty
 public void setStatePanel(String state) {
 	this.status = state;
 }	
-*/
+
 	
 }
