@@ -22,7 +22,7 @@ public class PanelServiceImpl implements PanelService {
 	PanelRepository panel;
 	@Override
 	public List<Panels> getPanelsByState() {
-		Query query = entityManager.createNativeQuery("SELECT p.Id, p.status FROM Panels as p " +
+		Query query = entityManager.createNativeQuery("SELECT p.* FROM Panels as p " +
                 "WHERE p.status LIKE '%broken%' ", Panels.class);
         return query.getResultList();
     

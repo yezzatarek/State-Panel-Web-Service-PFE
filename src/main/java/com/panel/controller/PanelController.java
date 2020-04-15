@@ -28,7 +28,6 @@ public class PanelController {
     public JSONObject getFiltered() {
 		JSONObject myobj = new JSONObject(); 
 		myobj.put("Panels", serv.getPanelsByState());
-
 		return myobj;
 
 	}
