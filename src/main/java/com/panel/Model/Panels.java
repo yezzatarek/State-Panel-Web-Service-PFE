@@ -51,13 +51,7 @@ public class Panels {
      this.id = id;
  }
 
-  public String getStatePanel() {
-	return status;
-}
-public void setStatePanel(String state) {
-	this.status = state;
-}
-
+  
 public String getStatus() {
 	return status;
 }
