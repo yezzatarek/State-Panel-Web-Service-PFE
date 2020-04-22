@@ -4,6 +4,7 @@ package com.panel.controller;
 import java.util.List;
 
 
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,11 @@ public class PanelController {
 	@Autowired
 	PanelService serv;
 
-
+	@CrossOrigin(origins = "*")
+    @GetMapping(produces = "application/json")
+    public List<Panels> all() {
+        return this.serv.findAllPanels();
+    }
 	
 	@GetMapping("/state")
     public JSONObject getFiltered() {
@@ -60,6 +65,10 @@ public class PanelController {
   }
 
 		
-	
+ @CrossOrigin(origins = "*")
+ @DeleteMapping("delete/{id}")
+ public void delete(@PathVariable String id) {
+	 serv.deletePanel(id);
+ }
 
 }

@@ -43,9 +43,18 @@ panel.deleteAll();
             o.setPriority(pane.getPriority());
             o.setDescription(pane.getDescription());
             o.setStatus(pane.getStatus());
-     
-     return this.panel.save(o); }
+              return this.panel.save(o); }
 	
+	@Override
+	public List<Panels> findAllPanels() {
+		return this.panel.findAll();
+	}
+	@Override
+	public void deletePanel(String id) {
+		this.panel.deleteById(id);
+		
+	}
 	
+
 
 }

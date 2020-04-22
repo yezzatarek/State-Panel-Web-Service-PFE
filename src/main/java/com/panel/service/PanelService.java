@@ -10,5 +10,6 @@ public interface PanelService {
 	public void createPanels(List<Panels>  panels);
 	public void deleteAllPanels();
 	public Panels updatePanels(Panels pane);
-
+	public List<Panels> findAllPanels();
+	public void deletePanel(String id);
 }
